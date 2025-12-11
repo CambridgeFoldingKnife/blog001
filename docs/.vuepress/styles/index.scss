@@ -1,0 +1,515 @@
+// 搜索框样式优化 - 使用更高优先级的选择器
+body .navbar-container .search-box,
+body .search-box,
+.navbar-container .search-box,
+.search-box {
+  position: relative !important;
+  width: 400px !important; // 增加搜索框宽度
+  display: inline-block !important;
+  min-width: 400px !important;
+  max-width: 400px !important;
+
+  input {
+    width: 100% !important; // 输入框占满搜索框
+    min-width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 80px !important;
+  }
+}
+
+// 额外的搜索框输入框样式
+.search-box input[type="search"] {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+}
+
+// 搜索框快捷键显示（如果主题没有内置）
+.navbar-search {
+  position: relative;
+
+  .search-box {
+    position: relative;
+    width: 100% !important;
+
+    input {
+      width: 100% !important;
+      padding-right: 80px !important;
+    }
+
+    &::after {
+      content: 'Ctrl K';
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--reco-bg-color-secondary, rgba(0, 0, 0, 0.05));
+      color: var(--reco-text-color-secondary, #666);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid var(--reco-border-color, rgba(0, 0, 0, 0.1));
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  }
+}
+
+// 暗黑模式下的搜索框快捷键
+[data-theme="dark"] {
+  .navbar-search .search-box::after {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+// 导航栏图标优化
+.navbar-items {
+  .navbar-item {
+
+    a,
+    .navbar-dropdown-title {
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+
+      .icon,
+      i {
+        font-size: 18px !important;
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        margin-right: 4px;
+      }
+
+      &:hover {
+
+        .icon,
+        i {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    // 下拉菜单图标
+    .navbar-dropdown-wrapper {
+      .navbar-dropdown-title {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+      }
+    }
+  }
+}
+
+// 确保图标和文字对齐
+.reco-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin-right: 4px !important;
+}
+
+// 移动端优化
+@media (max-width: 768px) {
+  .navbar-container .search-box,
+  .search-box {
+    width: 200px !important; // 移动端使用较小宽度
+    min-width: 200px !important;
+    max-width: 200px !important;
+  }
+  
+  .navbar-search {
+    width: 200px !important;
+  }
+  
+  .navbar-search .search-box::after {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
+
+// Mac 系统快捷键显示
+@media (platform: macos) {
+  .navbar-search .search-box::after {
+    content: '⌘ K';
+  }
+}
+
+// 阅读进度条样式
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  z-index: 9999;
+  transition: width 0.2s ease;
+}
+
+// 图片懒加载效果
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+// 平滑滚动
+html {
+  scroll-behavior: smooth;
+}
+
+// 代码块复制按钮优化
+.code-copy-btn {
+  opacity: 0.7;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+// 侧边栏目录激活状态
+.sidebar {
+  .sidebar-link {
+    &.active {
+      color: var(--reco-brand-color, #3eaf7c);
+      font-weight: 600;
+      border-left: 3px solid var(--reco-brand-color, #3eaf7c);
+      padding-left: 15px;
+    }
+  }
+}
+
+// 卡片悬停效果增强
+.card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// ============================================
+// 页面背景优化 - 借鉴 vuepress-reco 官网
+// ============================================
+
+// 页面整体背景 - 纯色
+body {
+  background: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] body {
+  background: #1a1a1a;
+}
+
+// 首页 Banner 区域背景透明，显示几何背景
+.banner-brand__wrapper {
+  background: transparent !important;
+  position: relative;
+  z-index: 1;
+}
+
+// 页面容器背景透明
+.page,
+.page-wrapper,
+.theme-container,
+.home-blog {
+  background: transparent !important;
+}
+
+// 深色模式优化
+[data-theme="dark"] {
+
+  // 阅读进度条
+  .reading-progress {
+    background: linear-gradient(to right, #c4b5fd, #a78bfa, #8b5cf6);
+    box-shadow: 0 0 15px rgba(167, 139, 250, 0.6);
+  }
+
+  // 链接颜色
+  a {
+    color: #a78bfa;
+
+    &:hover {
+      color: #c4b5fd;
+    }
+  }
+
+  // 卡片样式 - 深色模式下使用深灰色
+  .tutorial-card,
+  .info-item,
+  .path-card,
+  .tip-item,
+  .tutorial-item {
+    background: #2a2a2a !important;
+    border-color: rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      background: #303030 !important;
+      border-color: rgba(139, 92, 246, 0.5);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  // 个人信息卡片
+  .profile-card {
+    background: rgba(26, 26, 26, 0.95);
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .profile-trigger {
+    border-color: rgba(139, 92, 246, 0.6);
+    background: rgba(26, 26, 26, 0.9);
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+  }
+
+  // 标签
+  .tag {
+    background: rgba(139, 92, 246, 0.2);
+    color: #c4b5fd;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+  }
+
+  // 按钮
+  .tutorial-more-btn,
+  .cta-btn,
+  .contact-btn {
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+
+    &:hover {
+      box-shadow: 0 12px 30px rgba(139, 92, 246, 0.5);
+    }
+  }
+
+  // CTA 区域
+  .cta-content {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);
+    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
+  }
+
+  // 关于卡片
+  .about-card {
+    background: linear-gradient(135deg,
+        rgba(139, 92, 246, 0.05) 0%,
+        rgba(124, 58, 237, 0.05) 100%);
+    border-color: rgba(139, 92, 246, 0.3);
+  }
+}
+
+// 主题切换平滑动画
+* {
+  transition: background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+// ============================================
+// 强制移除教程卡片的所有下划线
+// ============================================
+.tutorial-card,
+a.tutorial-card {
+  text-decoration: none !important;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none !important;
+  }
+
+  * {
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+
+  p,
+  span,
+  div {
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+}
+
+// 确保所有状态下都没有下划线
+a.tutorial-card:link,
+a.tutorial-card:visited,
+a.tutorial-card:hover,
+a.tutorial-card:active,
+a.tutorial-card:focus {
+  text-decoration: none !important;
+
+  * {
+    text-decoration: none !important;
+  }
+}
+
+// 移除VuePress主题可能添加的下划线
+.page a.tutorial-card,
+.theme-reco a.tutorial-card,
+.content a.tutorial-card {
+  text-decoration: none !important;
+  border-bottom: none !important;
+
+  &:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+
+  * {
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+}
+
+// ============================================
+// 文章详情页内容宽度优化
+// ============================================
+
+// 增加文章内容区域的最大宽度
+.page-container,
+.page .theme-reco-content,
+.theme-reco-content {
+  max-width: 1200px !important;
+}
+
+// 文章内容主体宽度
+.page-content-wrapper,
+.content__default {
+  max-width: 1200px !important;
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+}
+
+// 调整侧边栏和内容区域的布局
+.page {
+  .page-wrapper {
+    max-width: 1400px !important;
+    margin: 0 auto;
+  }
+}
+
+// 平板设备响应式
+@media (max-width: 1400px) {
+  .page-container,
+  .page .theme-reco-content,
+  .theme-reco-content {
+    max-width: 95% !important;
+  }
+}
+
+// 移动设备响应式
+@media (max-width: 768px) {
+  .page-content-wrapper,
+  .content__default {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+// ============================================
+// 侧边栏宽度优化
+// ============================================
+
+// 增加左侧侧边栏宽度
+.sidebar,
+.sidebar-wrapper,
+.page-sidebar {
+  width: 320px !important;
+  max-width: 320px !important;
+}
+
+// 侧边栏内部内容宽度
+.sidebar-items,
+.sidebar-group,
+.sidebar-links {
+  width: 100%;
+}
+
+// 侧边栏标题文字不换行，超出显示省略号
+.sidebar-heading,
+.sidebar-link {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 1rem;
+}
+
+// 侧边栏分组标题
+.sidebar-group-title {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+// 侧边栏链接
+.sidebar-link {
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  
+  &:hover {
+    background-color: var(--reco-bg-color-secondary, rgba(0, 0, 0, 0.05));
+  }
+  
+  &.active {
+    color: var(--reco-brand-color, #3eaf7c);
+    background-color: var(--reco-bg-color-secondary, rgba(62, 175, 124, 0.1));
+  }
+}
+
+// 调整主内容区域的左边距以适应更宽的侧边栏
+.page.has-sidebar {
+  padding-left: 340px !important;
+}
+
+// 移动端侧边栏保持原有宽度
+@media (max-width: 1024px) {
+  .sidebar,
+  .sidebar-wrapper,
+  .page-sidebar {
+    width: 280px !important;
+    max-width: 280px !important;
+  }
+  
+  .page.has-sidebar {
+    padding-left: 300px !important;
+  }
+}
+
+// 移动设备侧边栏响应式
+@media (max-width: 768px) {
+  .sidebar,
+  .sidebar-wrapper,
+  .page-sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .page.has-sidebar {
+    padding-left: 0 !important;
+  }
+}
