@@ -1,5 +1,5 @@
 # 排除所有教程
-docs/tutorials/
+
 
 # Node modules
 node_modules/
