@@ -14,15 +14,15 @@ bannerBrand:
   description: Share technology, record life
   tagline: Code changes the world, words record life
   buttons:
-    - { text: Start Reading, link: '/posts.html' }
-    - { text: Tutorials, link: '/tutorials/', type: 'plain' }
+    - { text: Start Reading, link: '/blog001/posts.html' }
+    - { text: Tutorials, link: '/blog001/tutorials/', type: 'plain' }
   socialLinks:
     - { icon: 'BrandGithub', link: 'https://github.com/CambridgeFoldingKnife' }
     - { icon: 'Mail', link: 'mailto:3144253125@qq.com' }
 blog:
   socialLinks:
-    - { icon: 'BrandGithub', link: 'https://github.com/YIXUAN-oss' }
-    - { icon: 'Mail', link: 'mailto:byyi.xuan@outlook.com' }
+    - { icon: 'BrandGithub', link: 'https://github.com/CambridgeFoldingKnife' }
+    - { icon: 'Mail', link: 'mailto:3144253125@qq.com' }
 isShowTitleInHome: true
 actionText: About
 actionLink: /views/other/about
