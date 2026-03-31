@@ -16,6 +16,26 @@ sidebar: false
 ## 📅 最近更新
 
 <div class="diary-list">
+
+ <div class="diary-item">
+    <div class="diary-date">2026-3-01</div>
+    <h3>💭 确定前进的方向</h3>
+    <div class="diary-content">
+      <p>
+        博客也是一段时间没更新了，寒假开始复习考研，就停更，但相比于枯燥的数学英语知识，我更喜欢技术的学习和分享，最近又重新找到前进的方向，学习的动力。因为我找到我自己喜欢做的事儿，无论考研或者就业，确定好一个前进的方向。坚持的走下去即可，我们也不要美化那条没走过的路，追求自己喜欢做的事情就好。
+      </p>
+      <p>
+        这让我想起了爱因斯坦的名言："如果你不能简单地解释它，
+        那说明你还没有真正理解它。"
+      </p>
+      <p>
+        所以，从现在开始，我会更注重对知识的理解和总结，
+        而不仅仅是追求学习的数量。
+      </p>
+    </div>
+  </div>
+
+
   <div class="diary-item">
     <div class="diary-date">2025-10-16</div>
     <h3>🌟 开启博客之旅</h3>
@@ -56,6 +76,8 @@ sidebar: false
       </p>
     </div>
   </div>
+
+ 
   
   <div class="diary-item">
     <div class="diary-date">2025-09-15</div>
