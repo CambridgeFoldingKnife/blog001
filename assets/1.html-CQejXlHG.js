@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./app-Chd7F6ac.js";const c={};function n(o,r){return a(),e("div")}const l=t(c,[["render",n]]),_=JSON.parse('{"path":"/tags/huancun/1.html","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{l as comp,_ as data};
