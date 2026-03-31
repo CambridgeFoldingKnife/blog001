@@ -13,8 +13,8 @@ bannerBrand:
   description: 分享技术知识，记录成长历程
   tagline: 用代码改变世界，用文字记录生活
   buttons:
-    - { text: 开始阅读, link: '/posts.html' }
-    - { text: 教程中心, link: '/tutorials/', type: 'plain' }
+    - { text: 开始阅读, link: 'posts.html' }
+    - { text: 教程中心, link: 'tutorials/', type: 'plain' }
   socialLinks:
     - { icon: 'BrandGithub', link: 'https://github.com/CambridgeFoldingKnife' }
     - { icon: 'Mail', link: 'mailto:3144253125@qq.com' }
