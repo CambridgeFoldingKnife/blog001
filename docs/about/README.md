@@ -86,7 +86,7 @@ sidebar: false
   </div>
 </div>
 
-## 🎯 2025 年目标
+## 🎯 2026 年目标
 
 <div class="goals-list">
   <div class="goal-item">
