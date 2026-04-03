@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./app-DYkE0Coj.js";const o={};function r(c,n){return a(),e("div")}const i=t(o,[["render",r]]),l=JSON.parse('{"path":"/categories/shizhanxiangmu/1.html","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{i as comp,l as data};
