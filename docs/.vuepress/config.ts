@@ -21,7 +21,7 @@ export default defineUserConfig({
         ['meta', { name: 'keywords', content: '剑桥折刀,Cambridge Folding Knife,博客,技术博客,Java,Python,前端开发' }],
         ['meta', { name: 'author', content: '剑桥折刀' }],
         ['meta', { name: 'algolia-site-verification', content: '965773E690A426DF' }],
-        ['link', { rel: 'icon', href: '/favicon.png' }],
+        ['link', { rel: 'icon', href: 'favicon.png' }],
 
         // 自定义搜索框样式
         ['style', {}, `
