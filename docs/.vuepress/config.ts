@@ -9,10 +9,11 @@ export default defineUserConfig({
     description: '分享技术、记录生活 | Cambridge Folding Knife\'s Blog',
 
     // 根据部署环境设置 base 路径
-    // 本地开发: 使用根路径 /
+    // 本地开发：使用根路径 /
     // Vercel: 使用根路径 /
-    // GitHub Pages: 使用 /YIXUAN-Blog/
-     base: process.env.NODE_ENV === 'development' ? '/' : '/blog001/',
+    // GitHub Pages (自定义域名 camknife.me): 使用根路径 / ✅ 当前配置
+    // GitHub Pages (默认域名): 使用 /blog001/
+    base: '/',
 
     // 使用 Vite 打包工具
     bundler: viteBundler(),
