@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app-ByoNX5Zd.js";const o={};function r(c,s){return a(),t("div")}const l=e(o,[["render",r]]),i=JSON.parse('{"path":"/categories/suanfayushujujiegou/1.html","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{l as comp,i as data};
