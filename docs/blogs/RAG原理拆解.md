@@ -3,16 +3,15 @@
 title: 深入理解RAG技术：从分片到向量检索的全流程解析
 date: 2026-04-04
 categories:
-
-- AI大模型
-- 技术笔记
-  tags:
-- RAG
-- Embedding
-- Chunking
-- LLM
-- 向量数据库
-  author: 剑桥折刀
+  - AI大模型
+  - 技术笔记
+tags:
+  - RAG
+  - Embedding
+  - Chunking
+  - LLM
+  - 向量数据库
+author: 剑桥折刀
 
 ---
 
