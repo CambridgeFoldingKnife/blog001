@@ -1,3 +1,18 @@
+---
+title: Andrej Karpathy：如何用 LLM 构建个人知识库
+date: 2024-03-03
+categories:
+  - AI
+  - 知识管理
+tags:
+  - LLM
+  - 知识库
+  - AI Agent
+  - Karpathy
+  - wiki
+author: 剑桥折刀
+---
+
 # Andrej Karpathy：如何用 LLM 构建个人知识库
 附上 Andrej Karpathy 的推文链接：[LLM as OS](https://twitter.com/AndrejKarpathy/status/1692323232323232320?lang=zh)
 3.03.2024
