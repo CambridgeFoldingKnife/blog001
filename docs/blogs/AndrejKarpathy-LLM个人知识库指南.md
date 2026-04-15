@@ -1,6 +1,6 @@
 ---
 title: Andrej Karpathy：如何用 LLM 构建个人知识库
-date: 2024-03-03
+date: 2026-04-15
 categories:
   - AI
   - 知识管理

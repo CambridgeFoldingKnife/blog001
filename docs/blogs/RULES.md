@@ -1,6 +1,6 @@
 ---
-title: RULES: Karpathy-wiki规则
-date: 2024-03-03
+title: Karpathy-wiki规则
+date: 2026-04-15
 categories:
   - 知识管理
   - 效率工具
