@@ -1,21 +1,18 @@
----  
-
+---
 title: Java实现延迟任务的四种方案：从DelayQueue到时间轮算法
 date: 2026-04-03
 categories:
-
-- Java
-- 架构设计
-- 中间件
-  tags:
-- Java
-- Redisson
-- RocketMQ
-- Netty
-- 延迟队列
-- 时间轮
-  author: 剑桥折刀
-
+  - Java
+  - 架构设计
+  - 中间件
+tags:
+  - Java
+  - Redisson
+  - RocketMQ
+  - Netty
+  - 延迟队列
+  - 时间轮
+author: 剑桥折刀
 ---
 
 # Java实现延迟任务的四种方案：从DelayQueue到时间轮算法
