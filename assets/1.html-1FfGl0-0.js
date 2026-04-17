@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app-CjJuDk73.js";const n={};function o(r,c){return a(),t("div")}const l=e(n,[["render",o]]),i=JSON.parse('{"path":"/categories/rengongzhinen/1.html","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{l as comp,i as data};
