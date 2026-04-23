@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app-BXKg5Fxk.js";const c={};function o(r,n){return a(),t("div")}const l=e(c,[["render",o]]),i=JSON.parse('{"path":"/categories/bianchengzhexue/1.html","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{l as comp,i as data};
