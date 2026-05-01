@@ -4,6 +4,17 @@ docs/tutorials/computer-basics
 # Node modules
 node_modules/
 
+#python虚拟环境
+.venv/
+
+#微信公共号相关内容也不推送
+wx/
+cover-image/
+generate_cover.py
+__pycache__/
+*.pyc
+.trae/
+
 # Build outputs
 dist/
 .vuepress/dist/
@@ -25,3 +36,4 @@ Thumbs.db
 # 环境变量
 .env
 .env.local
+.baoyu-skills/
