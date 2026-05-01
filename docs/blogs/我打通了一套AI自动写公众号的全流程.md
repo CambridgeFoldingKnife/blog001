@@ -1,20 +1,17 @@
-***
-
+---
 title: 我打通了一套AI自动写公众号的全流程
 date: 2026-05-01
 categories:
-
-- AI工具
-- 效率提升
-  tags:
-- AI工作流
-- 公众号
-- 自动化
-- Skill
-- 即梦AI
-  author: 剑桥折刀
-
-***
+  - AI工具
+  - 效率提升
+tags:
+  - AI工作流
+  - 公众号
+  - 自动化
+  - Skill
+  - 即梦AI
+author: 剑桥折刀
+---
 
 # 我打通了一套AI自动写公众号的全流程
 
@@ -54,7 +51,7 @@ ps：文末附上开源地址。
 
 ## 第二步，用即梦AI把提示词变成图
 
-有了提示词，下一步就是生成图片。我刚开始是将**baoyu-cover-image**生成提示词粘贴给\*\*TRAE-SOLO的MTC模式，\*\*质量也很不错，但我还是感觉麻烦，为什么我还要再打开一个TRAE，我直接用claude跑完全程算了，然后我根据我需求选择一个文生图模型即可
+有了提示词，下一步就是生成图片。我刚开始是将**baoyu-cover-image**生成提示词粘贴给**TRAE-SOLO的MTC模式**，质量也很不错，但我还是感觉麻烦，为什么我还要再打开一个TRAE，我直接用claude跑完全程算了，然后我根据我需求选择一个文生图模型即可
 
 这里我用的是字节跳动的即梦AI（Jimeng），出图质量很稳，而且对中文提示词的理解也不错。
 
@@ -174,6 +171,7 @@ rag-principle/
 
 我的skill仓库 ([CambridgeFoldingKnife/camknife-skills](https://github.com/CambridgeFoldingKnife/camknife-skills))
 
+我的博客网站 ([https://camknife.com/](https://camknife.com/))
 ![2026-05-01-17-15](images/2026-05-01-17-15.png)  
 ![2026-05-01-17-16](images/2026-05-01-17-16.png)
 
