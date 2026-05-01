@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app-1Coc8Pre.js";const o={};function r(c,s){return a(),t("div")}const i=e(o,[["render",r]]),l=JSON.parse('{"path":"/categories/jiagousheji/1.html","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{i as comp,l as data};

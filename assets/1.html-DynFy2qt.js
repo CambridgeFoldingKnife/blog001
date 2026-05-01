@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./app-1Coc8Pre.js";const r={};function o(c,n){return a(),e("div")}const l=t(r,[["render",o]]),_=JSON.parse('{"path":"/tags/Karpathy/1.html","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{l as comp,_ as data};

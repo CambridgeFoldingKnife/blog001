@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app-CV9LOh4I.js";const o={};function c(n,r){return a(),t("div")}const l=e(o,[["render",c]]),i=JSON.parse('{"path":"/categories/bianchenggongju/1.html","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{l as comp,i as data};
