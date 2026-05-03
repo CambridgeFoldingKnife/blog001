@@ -1,4 +1,4 @@
-***
+---
 
 title: Andrej Karpathy：如何用 LLM 构建个人知识库
 date: 2026-04-15
@@ -15,7 +15,7 @@ categories:
 - 知识缺口
   author: 剑桥折刀
 
-***
+---
 
 # Andrej Karpathy：如何用 LLM 构建个人知识库
 

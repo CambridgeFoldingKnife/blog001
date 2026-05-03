@@ -1,4 +1,4 @@
-***
+---
 
 title: Karpathy-wiki规则
 date: 2026-04-15
@@ -14,7 +14,7 @@ categories:
 - Karpathy
   author: 剑桥折刀
 
-***
+---
 
 # **Karpathy-wiki规则**
 
