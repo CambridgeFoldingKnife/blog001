@@ -1,19 +1,16 @@
 ---
-
 title: Karpathy-wiki规则
 date: 2026-04-15
 categories:
-
-- 知识管理
-- 效率工具
-  tags:
-- wiki
-- LLM
-- 知识库
-- Obsidian
-- Karpathy
-  author: 剑桥折刀
-
+  - 知识管理
+  - 效率工具
+tags:
+  - wiki
+  - LLM
+  - 知识库
+  - Obsidian
+  - Karpathy
+author: 剑桥折刀
 ---
 
 # **Karpathy-wiki规则**

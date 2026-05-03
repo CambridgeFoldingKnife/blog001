@@ -1,20 +1,17 @@
 ---
-
-title: Andrej Karpathy：如何用 LLM 构建个人知识库
-date: 2026-04-15
+title: 如何用 LLM 构建个人知识库：Andrej Karpathy+LLM＋复利工程
+date: 2026-05-02
 categories:
-
-- AI
-- 知识管理
-  tags:
-- LLM
-- 知识库
-- AI Agent
-- Karpathy
-- wiki
-- 知识缺口
-  author: 剑桥折刀
-
+  - AI工具
+  - 知识管理
+tags:
+  - LLM
+  - Wiki
+  - 知识库
+  - Obsidian
+  - Karpathy
+  - 复利工程
+author: 剑桥折刀
 ---
 
 # Andrej Karpathy：如何用 LLM 构建个人知识库
