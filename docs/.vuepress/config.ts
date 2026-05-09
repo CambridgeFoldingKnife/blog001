@@ -17,6 +17,11 @@ export default defineUserConfig({
 
     // 使用 Vite 打包工具
     bundler: viteBundler(),
+
+    // Markdown 配置 - 启用 HTML 支持
+    markdown: {
+        html: true,
+    },
     head: [
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         ['meta', { name: 'keywords', content: '剑桥折刀,Cambridge Folding Knife,博客,技术博客,Java,Python,前端开发' }],

@@ -37,3 +37,7 @@ Thumbs.db
 .env
 .env.local
 .baoyu-skills/
+
+# Claude Code
+.claude/
+skills-lock.json
