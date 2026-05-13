@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./app-s5WA7ptX.js";const o={};function c(n,r){return a(),e("div")}const l=t(o,[["render",c]]),_=JSON.parse('{"path":"/tags/fuligongcheng/1.html","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{l as comp,_ as data};
