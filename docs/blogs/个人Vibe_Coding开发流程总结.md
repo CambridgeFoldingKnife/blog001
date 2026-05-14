@@ -1,17 +1,20 @@
----
-title: 个人Vibe_Coding开发流程总结
+***
+
+title: 个人Vibe\_Coding开发流程总结
 date: 2026-05-08
 categories:
-  - AI工具
-  - 开发效率
-tags:
-  - Vibe Coding
-  - AI编程
-  - 开发流程
-  - TRAE
-  - Claude Code
-author: 剑桥折刀
----
+
+- AI工具
+- 开发效率
+  tags:
+- Vibe Coding
+- AI编程
+- 开发流程
+- TRAE
+- Claude Code
+  author: 剑桥折刀
+
+***
 
 # Vibe Coding 开发流程总结
 
@@ -34,7 +37,7 @@ author: 剑桥折刀
 | 维度       | 内容                      |
 | -------- | ----------------------- |
 | **灵感来源** | 推文、技术分享视频、大牛博客          |
-| **主要工具** | TRAE SOLO、Claude Code        |
+| **主要工具** | TRAE SOLO、Claude Code   |
 | **核心任务** | 项目报告分析 + 技术可行性评估        |
 | **对话深度** | 清楚项目核心目标、模块数量、页面交互、功能按钮 |
 | **关键原则** | 先抓住核心功能，不必一次性确定全部开发内容   |
@@ -58,29 +61,29 @@ author: 剑桥折刀
 
 [Godly - Astronomically good web design inspiration](https://godly.website/)
 
-![图1](./images/godly前端设计样式.png){style="width:70%;"}
+![图1](./images/godly前端设计样式.png)
 
 [Mobbin — UI & UX design inspiration for mobile & web apps](https://mobbin.com/)
 
-![图2](./images/mobbin页面设计.png){style="width:70%;"}
+![图2](./images/mobbin页面设计.png)
 
 [UI/UX Design Inspiration & User Flows from Top Apps — Page Flows](https://pageflows.com/)
 
-![图3](./images/pageflows.png){style="width:70%;"}
+![图3](./images/pageflows.png)
 
 这里我们直接截屏整理页面、或者录屏交给我们的 Agent 工具让他帮我们复刻整个效果。
 
 提示词："参考上传附件的ui设计内容，帮我统一优化ui视觉，产品功能保持不变"
 
-![图5](./images/traeUI复刻.png){style="width:70%;"}
+![图5](./images/traeUI复刻.png)
 
 我想要的效果动态的效果，气泡随着鼠标移动：
 
-![图7](./images/想要的ui.png){style="width:70%;"}
+![图7](./images/想要的ui.png)
 
 TRAE SOLO MTC模式生成效果没有动态效果，但是整体效果模仿我认为够用：
 
-![图6](./images/trae复刻的ui.png){style="width:70%;"}
+![图6](./images/trae复刻的ui.png)
 
 ***
 
@@ -88,12 +91,12 @@ TRAE SOLO MTC模式生成效果没有动态效果，但是整体效果模仿我�
 
 #### 1.3.1 技术方案选择
 
-| 方案  | 工具链                                                                                |
-| --- | ---------------------------------------------------------------------------------- |
-| 方案一 | Google Stitch → Google AI Studio（直接导入生成代码）                                         |
+| 方案  | 工具链                                                                                  |
+| --- | ------------------------------------------------------------------------------------ |
+| 方案一 | Google Stitch → Google AI Studio（直接导入生成代码）                                           |
 | 方案二 | TRAE SOLO + Claude Code + GLM 5.1 / Kimi K2.6 / DeepSeek V4 Pro（使用 CC-switch 一键切换厂商） |
 
-![图4](./images/TRAE开发.png){style="width:70%;"}
+![图4](./images/TRAE开发.png)
 
 #### 1.3.2 开发建议
 
@@ -121,7 +124,7 @@ TRAE SOLO MTC模式生成效果没有动态效果，但是整体效果模仿我�
 | **审查重点** | 可优化点、潜在问题             |
 | **自我要求** | 重点流程自己要清楚用什么技术实现      |
 
-![图8](./images/claude代码审查命令.png){style="width:70%;"}
+![图8](./images/claude代码审查命令.png)
 
 ***
 
@@ -169,11 +172,11 @@ AI生成的代码可能存在：
 
 | 阶段   | 推荐工具                                     |
 | ---- | ---------------------------------------- |
-| 灵感分析 | TRAE SOLO                               |
-| 原型设计 | Google Stitch、墨刀、TRAE MTC 模式              |
+| 灵感分析 | TRAE SOLO                                |
+| 原型设计 | Google Stitch、墨刀、TRAE MTC 模式             |
 | 前端开发 | Google AI Studio、TRAE SOLO + Claude Code |
 | 后端开发 | Claude Code、TRAE IDE、Cursor              |
-| 模型切换 | GLM 5.1、Kimi K2.6、DeepSeek V4 Pro       |
+| 模型切换 | GLM 5.1、Kimi K2.6、DeepSeek V4 Pro        |
 | 版本控制 | GitHub                                   |
 | 代码审查 | Claude（审查TRAE代码）                         |
 
@@ -191,3 +194,4 @@ AI生成的代码可能存在：
 | **知识输出**   | 封装Skill、写博客、开源分享 |
 
 ***
+
