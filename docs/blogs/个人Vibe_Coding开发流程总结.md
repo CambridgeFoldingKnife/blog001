@@ -1,20 +1,17 @@
-***
-
-title: 个人Vibe\_Coding开发流程总结
+---
+title: 个人Vibe_Coding开发流程总结
 date: 2026-05-08
 categories:
-
 - AI工具
 - 开发效率
-  tags:
+tags:
 - Vibe Coding
 - AI编程
 - 开发流程
 - TRAE
 - Claude Code
-  author: 剑桥折刀
-
-***
+author: 剑桥折刀
+---
 
 # Vibe Coding 开发流程总结
 
