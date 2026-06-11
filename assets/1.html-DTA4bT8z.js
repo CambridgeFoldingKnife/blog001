@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./app-7CoeLUIN.js";const o={};function n(r,c){return a(),e("div")}const l=t(o,[["render",n]]),_=JSON.parse('{"path":"/tags/gongzhonghao/1.html","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{l as comp,_ as data};
