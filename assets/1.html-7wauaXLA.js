@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./app-BudXdAsw.js";const r={};function n(o,c){return a(),e("div")}const l=t(r,[["render",n]]),i=JSON.parse('{"path":"/tags/Prompt-Engineering/1.html","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{l as comp,i as data};
