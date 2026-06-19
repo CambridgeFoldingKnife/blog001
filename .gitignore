@@ -7,6 +7,9 @@ node_modules/
 #python虚拟环境
 .venv/
 
+#博客草稿箱
+博客草稿箱/
+
 #微信公共号相关内容也不推送
 wx/
 cover-image/
