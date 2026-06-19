@@ -13,7 +13,7 @@ tags:
 author: 剑桥折刀
 ---
 
-# 写好 AI Skill 能省 63% Token：我拆解了 Matt Pocock 的新工具
+# 写好AI-Skill能省 63%Token：我拆解了 Matt Pocock 的新工具
 
 ## 一、你的项目Skill/Rules 是不是太繁杂了？
 
