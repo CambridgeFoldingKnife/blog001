@@ -1,6 +1,6 @@
 ---
 title: 别只用一个 AI 写代码了：Omnigent 让多个 Agent 像团队一样协作
-date: 2026-06-19
+date: 2026-06-26
 categories:
   - AI工具
   - 开发效率
