@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app-B3PJ3C6F.js";const n={};function o(c,r){return a(),t("div")}const s=e(n,[["render",o]]),l=JSON.parse('{"path":"/categories/wangyebuju-vibe-codingchangyongyuyanxilie/1.html","title":"","lang":"zh-CN","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{s as comp,l as data};
