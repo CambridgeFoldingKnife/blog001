@@ -4,6 +4,9 @@ docs/tutorials/computer-basics
 # Node modules
 node_modules/
 
+# Remotion 项目（仅用于本地生成动画素材，整体不提交）
+remotion-demos/
+
 #python虚拟环境
 .venv/
 

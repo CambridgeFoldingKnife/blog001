@@ -513,3 +513,63 @@ a.tutorial-card:focus {
     padding-left: 0 !important;
   }
 }
+
+// ============================================
+// 视频居中播放按钮 - 项目全局
+// ============================================
+// 视频容器（相对定位，用于承载居中按钮）
+.mid-play-wrap {
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  line-height: 0;
+
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// 居中播放按钮（深色实底，适配浅色视频背景）
+.mid-play-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 68px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s ease, transform 0.2s ease, background 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  svg {
+    width: 26px;
+    height: 26px;
+    fill: #fff;
+    margin-left: 3px; // 视觉居中三角形
+  }
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  // 播放中隐藏
+  &.is-playing {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+// 深色实底圆钮在深/浅背景上均清晰，无需按主题区分

@@ -125,6 +125,64 @@ export default defineClientConfig({
     },
 
     setup() {
+        // 视频居中播放按钮
+        if (typeof window !== 'undefined') {
+            const initMidPlayVideo = () => {
+                // 找出所有文章正文中的 <video>，且尚未被初始化
+                document.querySelectorAll<HTMLVideoElement>('.theme-reco-content video, .content__default video, .theme-default-content video').forEach(video => {
+                    if (video.dataset.midplay === '1') return;
+                    video.dataset.midplay = '1';
+
+                    // 去掉原生控制条，改用居中播放按钮
+                    const hadControls = video.controls;
+                    video.removeAttribute('controls');
+
+                    // 包一层相对定位容器
+                    const wrap = document.createElement('div');
+                    wrap.className = 'mid-play-wrap';
+                    video.parentNode!.insertBefore(wrap, video);
+                    wrap.appendChild(video);
+
+                    // 居中播放按钮
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'mid-play-btn';
+                    btn.setAttribute('aria-label', '播放视频');
+                    btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+
+                    const startPlay = () => {
+                        video.play();
+                        btn.classList.add('is-playing');
+                    };
+                    btn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); startPlay(); });
+
+                    // 点击视频本身也播放
+                    video.addEventListener('click', () => {
+                        if (video.paused) startPlay(); else video.pause();
+                    });
+
+                    wrap.appendChild(btn);
+
+                    // 播放/暂停状态同步按钮显隐
+                    video.addEventListener('play', () => btn.classList.add('is-playing'));
+                    video.addEventListener('pause', () => btn.classList.remove('is-playing'));
+                    video.addEventListener('ended', () => btn.classList.remove('is-playing'));
+
+                    // 如果保留 controls（用于进度/音量），播放后重新显示
+                    if (hadControls) {
+                        video.setAttribute('controls', '');
+                    }
+                });
+            };
+
+            // 初始 + 路由切换后执行（VuePress 是 SPA）
+            setTimeout(initMidPlayVideo, 800);
+            setTimeout(initMidPlayVideo, 1500);
+            if ((window as any).__VUEPRESS_ROUTER__) {
+                (window as any).__VUEPRESS_ROUTER__.afterEach(() => setTimeout(initMidPlayVideo, 800));
+            }
+        }
+
         // 添加阅读进度条
         if (typeof window !== 'undefined') {
             const progressBar = document.createElement('div');
