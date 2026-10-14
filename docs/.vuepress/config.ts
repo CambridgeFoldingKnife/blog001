@@ -3,6 +3,47 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { recoTheme } from 'vuepress-theme-reco'
 // import { docsearchPlugin } from '@vuepress/plugin-docsearch' // 已改用主题内置 Algolia
 
+/**
+ * 今日八股数据插件
+ * 构建时扫描 docs/bagu/posts/ 下的文章，生成列表写入 .temp/bagu/posts.js，
+ * 供 BaguIndex.vue 瀑布流组件导入。新增文章后重新构建即可自动收录。
+ */
+const baguPostsPlugin = () => ({
+    name: 'bagu-posts-data',
+    onInitialized(app: any) {
+        const pad = (n: number, len = 2) => String(n).padStart(len, '0')
+        const dateValue = (d: any) => {
+            const t = new Date(d).getTime()
+            return Number.isNaN(t) ? 0 : t
+        }
+        const dateLabel = (d: any) => {
+            if (!d) return ''
+            if (typeof d === 'string') return d.slice(0, 10)
+            const t = new Date(d)
+            if (Number.isNaN(t.getTime())) return ''
+            return `${t.getFullYear()}-${pad(t.getMonth() + 1)}-${pad(t.getDate())}`
+        }
+        const posts = app.pages
+            .filter((p: any) => {
+                const fm = p.frontmatter || {}
+                return (p.path || '').startsWith('/bagu/posts/') && !!fm.title && fm.publish !== false
+            })
+            .sort((a: any, b: any) => dateValue(a.frontmatter.date) - dateValue(b.frontmatter.date))
+            .map((p: any, index: number) => {
+                const fm = p.frontmatter || {}
+                return {
+                    path: p.path,
+                    title: p.title || fm.title,
+                    desc: fm.description || '',
+                    tags: Array.isArray(fm.tags) ? fm.tags.map(String) : fm.tags ? [String(fm.tags)] : [],
+                    date: dateLabel(fm.date),
+                    num: pad(index + 1, 3),
+                }
+            })
+        app.writeTemp('bagu/posts.js', `export default ${JSON.stringify(posts)}`)
+    },
+})
+
 export default defineUserConfig({
     lang: 'zh-CN',
     title: '剑桥折刀的博客',
@@ -17,6 +58,9 @@ export default defineUserConfig({
 
     // 使用 Vite 打包工具
     bundler: viteBundler(),
+
+    // 插件：生成今日八股列表数据
+    plugins: [baguPostsPlugin()],
 
     // Markdown 配置 - 启用 HTML 支持
     markdown: {
@@ -72,6 +116,7 @@ export default defineUserConfig({
         // 导航栏配置
         navbar: [
             { text: '首页', link: '/', icon: 'IconHome' },
+            { text: '今日八股（秋招日记）', link: '/bagu/', icon: 'IconBagu' },
             { text: '教程中心', link: '/tutorials/', icon: 'IconBook' },
             { text: '技术文章', link: '/posts.html', icon: 'IconArticle' },
             { text: '友情链接', link: '/friendship/', icon: 'IconGift' },
@@ -155,7 +200,10 @@ export default defineUserConfig({
 
             // 数据库
             '/tutorials/database/mysql/': [],
-            '/tutorials/database/redis/': []
+            '/tutorials/database/redis/': [],
+
+            // 今日八股（记录秋招八股学习日志）
+            '/bagu/': []
         },
 
         // Algolia 搜索配置（已禁用，使用主题内置搜索）

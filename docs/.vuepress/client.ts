@@ -5,7 +5,9 @@ import IconArticle from './components/IconArticle.vue'
 import IconGift from './components/IconGift.vue'
 import IconPen from './components/IconPen.vue'
 import IconUser from './components/IconUser.vue'
+import IconBagu from './components/IconBagu.vue'
 import FriendshipLinks from './components/FriendshipLinks.vue'
+import BaguIndex from './components/BaguIndex.vue'
 
 export default defineClientConfig({
     enhance({ app, router, siteData }) {
@@ -16,8 +18,11 @@ export default defineClientConfig({
         app.component('IconGift', IconGift)
         app.component('IconPen', IconPen)
         app.component('IconUser', IconUser)
+        app.component('IconBagu', IconBagu)
         // 注册友情链接组件
         app.component('FriendshipLinks', FriendshipLinks)
+        // 注册今日八股瀑布流组件
+        app.component('BaguIndex', BaguIndex)
         // 添加搜索框快捷键提示
         if (typeof window !== 'undefined') {
             const addSearchShortcut = () => {

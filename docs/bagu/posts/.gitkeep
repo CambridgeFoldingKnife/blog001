@@ -1,0 +1,10 @@
+# 今日八股文章目录
+# 在此新增 .md 文件即可被自动收录（构建时扫描 /bagu/posts/）
+# frontmatter 需包含：title / date / tags / description
+# 例：
+# ---
+# title: 题目
+# date: 2026-10-15
+# tags: [Java, JVM]
+# description: 一句话摘要，会显示在卡片上
+# ---
