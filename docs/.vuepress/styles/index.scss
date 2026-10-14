@@ -4,16 +4,57 @@ body .search-box,
 .navbar-container .search-box,
 .search-box {
   position: relative !important;
-  width: 400px !important; // 增加搜索框宽度
+  width: 200px !important; // 收窄搜索框，避免导航栏内容溢出压住左侧站点标题
   display: inline-block !important;
-  min-width: 400px !important;
-  max-width: 400px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
 
   input {
     width: 100% !important; // 输入框占满搜索框
     min-width: 100% !important;
     max-width: 100% !important;
-    padding-right: 80px !important;
+    padding-right: 66px !important; // 为右侧 Ctrl K 徽标留位
+  }
+}
+
+// 导航栏防重叠（结构性方案）
+// 主题把 .navbar-links-wrapper 设为 absolute + right-4 + white-space:nowrap：
+// 它的右边缘被钉死，内容一旦比“品牌 + 剩余空间”更宽，就只能向左溢出压住站点标题，
+// 而 max-width 对 absolute + nowrap 的内容没有任何约束力。
+// 这里把它改回正常文档流（position:relative 仍是定位祖先，不影响下拉菜单），
+// 于是 flex 会把空间缺口分配给可收缩的搜索框，菜单项保持完整，标题永远不会被覆盖。
+@media (min-width: 768px) {
+  // 左侧品牌固定宽度，不参与收缩
+  body .navbar-container .navbar-inner > .site-brand {
+    flex: 0 0 auto;
+  }
+
+  body .navbar-container .navbar-inner .navbar-links-wrapper {
+    position: relative !important; // 保留为定位祖先，下拉菜单定位逻辑不变
+    right: 0 !important; // 抵消 tailwind 的 right-4（relative 下会把元素整体左移 16px）
+    top: 0 !important;
+    margin-left: auto; // 保留主题的 h-16，下拉菜单偏移量与原布局完全一致
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  // 菜单项保持完整宽度，不允许被压扁
+  body .navbar-container .navbar-links-wrapper .navbar-links {
+    flex: 0 0 auto;
+  }
+
+  // 去掉搜索框外层空 div 的盒子，让 .search-box 直接成为 flex 子项
+  body .navbar-container .navbar-links-wrapper > div:first-child {
+    display: contents !important;
+  }
+
+  // 搜索框：基准 200px，空间不足时可一路收缩，始终优先让位于菜单与标题
+  body .navbar-container .navbar-links-wrapper .search-box {
+    flex: 0 1 200px;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 200px !important;
   }
 }
 
@@ -34,7 +75,7 @@ body .search-box,
 
     input {
       width: 100% !important;
-      padding-right: 80px !important;
+      padding-right: 66px !important;
     }
 
     &::after {
@@ -116,21 +157,26 @@ body .search-box,
 }
 
 // 移动端优化
-@media (max-width: 768px) {
-  .navbar-container .search-box,
-  .search-box {
-    width: 200px !important; // 移动端使用较小宽度
-    min-width: 200px !important;
-    max-width: 200px !important;
+@media (max-width: 767px) {
+  body .navbar-container .search-box,
+  body .search-box {
+    width: 160px !important; // 移动端使用较小宽度
+    min-width: 160px !important;
+    max-width: 160px !important;
   }
-  
-  .navbar-search {
-    width: 200px !important;
+
+  body .navbar-search {
+    width: 160px !important;
   }
-  
-  .navbar-search .search-box::after {
+
+  body .navbar-search .search-box::after {
     font-size: 10px;
     padding: 3px 6px;
+  }
+
+  // 移动端隐藏站点标题文字，仅保留 logo，避免与搜索框重叠
+  body .navbar-container .site-name.can-hide {
+    display: none !important;
   }
 }
 

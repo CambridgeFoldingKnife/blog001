@@ -73,12 +73,75 @@ export default defineUserConfig({
         ['meta', { name: 'algolia-site-verification', content: '965773E690A426DF' }],
         ['link', { rel: 'icon', href: 'favicon.png' }],
 
-        // 自定义搜索框样式
+        // 自定义搜索框 + 导航栏防重叠样式
+        // 注意：必须放在 head 里。docs/.vuepress/styles/index.scss 与 palette.scss
+        // 当前不会被加载（主题 palette 预设是 css，只认 styles/index.css），
+        // 写在那里对页面没有任何作用。
         ['style', {}, `
-            .search-box { width: 280px !important; min-width: 280px !important; max-width: 280px !important; }
-            .search-box input { width: 100% !important; }
-            @media (max-width: 768px) {
-                .search-box { width: 200px !important; min-width: 200px !important; max-width: 200px !important; }
+            /* 搜索框宽度 */
+            body .navbar-container .search-box,
+            body .search-box {
+                width: 200px !important;
+                min-width: 200px !important;
+                max-width: 200px !important;
+            }
+            body .navbar-container .search-box input,
+            body .search-box input {
+                width: 100% !important;
+                padding-right: 66px !important;
+            }
+
+            /* 导航栏防重叠（结构性方案）
+               主题把 .navbar-links-wrapper 设为 absolute + right-4 + white-space:nowrap，
+               右边缘被钉死，内容一旦超宽就只能向左溢出压住站点标题，
+               而 max-width 对 absolute + nowrap 的内容没有约束力。
+               这里把它改回正常文档流（position:relative 仍是定位祖先，下拉菜单定位不变），
+               于是 flex 会把空间缺口分配给可收缩的搜索框，标题永远不会被覆盖。 */
+            @media (min-width: 768px) {
+                body .navbar-container .navbar-inner > .site-brand {
+                    flex: 0 0 auto;
+                }
+                body .navbar-container .navbar-inner .navbar-links-wrapper {
+                    position: relative !important;
+                    right: 0 !important;
+                    top: 0 !important;
+                    margin-left: auto;
+                    flex: 0 1 auto;
+                    min-width: 0;
+                    max-width: 100%;
+                }
+                body .navbar-container .navbar-links-wrapper .navbar-links {
+                    flex: 0 0 auto;
+                }
+                /* 菜单项间距由主题的 24px 收紧到 12px：
+                   7 个菜单项共节省约 108px，正好补上搜索框的缺口，
+                   使搜索框在 ≥1360px 的导航栏下仍保持完整 200px 宽度 */
+                body .navbar-container .navbar-links-wrapper .navbar-links__item {
+                    margin-left: 6px !important;
+                    margin-right: 6px !important;
+                }
+                body .navbar-container .navbar-links-wrapper > div:first-child {
+                    display: contents !important;
+                }
+                body .navbar-container .navbar-links-wrapper .search-box {
+                    flex: 0 1 200px;
+                    width: auto !important;
+                    min-width: 0 !important;
+                    max-width: 200px !important;
+                }
+            }
+
+            /* 移动端：收窄搜索框并隐藏站点标题文字，只保留 logo */
+            @media (max-width: 767px) {
+                body .navbar-container .search-box,
+                body .search-box {
+                    width: 160px !important;
+                    min-width: 160px !important;
+                    max-width: 160px !important;
+                }
+                body .navbar-container .site-name.can-hide {
+                    display: none !important;
+                }
             }
         `],
 
