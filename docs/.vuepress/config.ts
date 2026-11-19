@@ -179,6 +179,7 @@ export default defineUserConfig({
         // 导航栏配置
         navbar: [
             { text: '首页', link: '/', icon: 'IconHome' },
+            { text: 'Android移动端', link: '/tutorials/android-dev/', icon: 'IconBook' },
             { text: '今日八股（秋招日记）', link: '/bagu/', icon: 'IconBagu' },
             { text: '教程中心', link: '/tutorials/', icon: 'IconBook' },
             { text: '技术文章', link: '/posts.html', icon: 'IconArticle' },
@@ -260,6 +261,13 @@ export default defineUserConfig({
             '/tutorials/harmonyos-dev/15-performance-optimization/': [],
             '/tutorials/harmonyos-dev/16-testing-devops/': [],
             '/tutorials/harmonyos-dev/17-harmony-ecology/': [],
+
+            // Android 开发
+            '/tutorials/android-dev/': [],
+            '/tutorials/android-dev/01-environment/': [],
+            '/tutorials/android-dev/02-kotlin-basics/': [],
+            '/tutorials/android-dev/03-android-basics/': [],
+            '/tutorials/android-dev/04-practice/': [],
 
             // 数据库
             '/tutorials/database/mysql/': [],

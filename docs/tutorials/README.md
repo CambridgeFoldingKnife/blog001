@@ -633,6 +633,32 @@ export default {
   </div>
 </div>
 
+<!-- Android 开发工程师 -->
+<div class="magic-card" data-href="android-dev/">
+  <span class="magic-card__bg"></span>
+  <div class="card-header">
+    <div class="card-icon">🤖</div>
+    <span class="card-badge badge-must">重点</span>
+  </div>
+  <div class="card-content">
+    <h3>Android 开发工程师</h3>
+    <p class="card-desc">Kotlin + Android 原生应用开发</p>
+    <div class="card-modules">
+      <div class="module-title">📑 包含模块：</div>
+      <div class="module-list">
+        <div class="module-item">🟣 Kotlin 基础语法</div>
+        <div class="module-item">🛠️ 环境与工程结构</div>
+        <div class="module-item">📱 Activity 与布局</div>
+        <div class="module-item">💾 数据持久化</div>
+        <div class="module-item">🎮 项目实战</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="footer-text">开始学习 →</span>
+    </div>
+  </div>
+</div>
+
 <!-- 大数据开发工程师 -->
 <div class="magic-card" data-href="big-data/">
   <span class="magic-card__bg"></span>
